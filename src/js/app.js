@@ -5,5 +5,13 @@ flsFunctions.isWebp();
 lazyLoad.lazyLoad();
 
 document.querySelector('.menu-collapse').addEventListener('click', function () {
-    document.querySelector('.menu-h').classList.toggle('open');
+    let menu = document.querySelector('.menu-h')
+
+    menu.classList.toggle("open");
+    let panel = document.querySelector('.menu-h ul');
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+    } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
 });
