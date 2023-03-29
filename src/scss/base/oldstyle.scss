@@ -1,0 +1,187 @@
+/*	CSS-Framework
+
+	Version		: 0.3.1
+	Author		: Aleksej Romanovskij (http://css-framework.ru)
+	License		: Creative Commons Attribution 3.0 Unported License (http://creativecommons.org/licenses/by/3.0/)
+
+------------------------------ */
+		
+/* Utilites
+------------------------------ */
+
+* { margin: 0; padding: 0; }
+
+/* border:1px solid red; */
+
+*:focus { outline: none; }
+.hidden { display: none; }
+.show { display: block!important; }
+.no-margin { margin: 0!important; }
+.no-padding { padding: 0!important; }
+.no-bg { background: none!important; }
+.no-border, a img { border: none; }
+.container:after, .columns:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.img-repl { text-indent: -9999px; overflow: hidden; display: block; }
+.cc { clear: both; }
+ul li { list-style: none; }
+
+/* Fonts
+30------------------------------ */
+@font-face {
+font-family: 'Gotham-Black';
+src: url('Gotham-Black.otf');
+src: local('Gotham-Black'), url('Gotham-Black.ttf') format('truetype'); } 
+
+@font-face {
+font-family: 'Gotham-Bold';
+src: url('Gotham-Bold.otf');
+src: local('Gotham-Bold'), url('Gotham-Bold.ttf') format('truetype'); } 
+
+@font-face {
+font-family: 'Gotham-Medium';
+src: url('Gotham-Medium.otf');
+src: local('Gotham-Medium'), url('Gotham-Medium.ttf') format('truetype'); } 
+
+ 
+/* Main styles
+------------------------------ */
+
+html { height: 100%; color: #0f090b; background: #fff; font: 12px Arial,Helvetica,sans-serif; }
+body { height: auto !important; height: 100%; min-height: 100%; } /* body height 100% */
+
+a { color: #4a4a4a; text-decoration:none; }
+a:visited {  }
+a:hover { color: #8c8b8b; text-decoration:none; }
+a:active {  }
+
+.sbar a { color: #FF4931; }
+.sbar a:hover { /*color: #FF4931*/ text-decoration:underline; }
+
+/* Layout elements amd content blocks
+------------------------------ */
+.wrapper { margin: 0 auto; width: 960px; }
+#hd { background: #fff url('https://ayler.com/i/hd_bg.gif') left top repeat-x; }
+#page { background: #fff url('https://ayler.com/i/page_bg.jpg') right top no-repeat; }
+#head { position: relative; background: #c6061b url('https://ayler.com/i/hd_bg.jpg') left top no-repeat; height:100px; color: #fff; }
+
+.col-narrow { width: 350px; float: right;}
+.col-wide { width: 610px; float: left; padding-top: 20px; }
+
+
+#sbar {  }
+#cont {  }
+
+.cont-wrap { padding: 20px 20px 20px 40px; }
+#footer { clear:both; position:relative; width:100%; height:50px; margin-top: 1px; border-top: 5px solid #481205; background: #030907; }
+
+/* Horizontal Menu
+------------------------------ */
+.menu-h { background: #030907 url('https://ayler.com/i/nav.jpg'); height: 25px; overflow: hidden; border-top: 1px solid #fff; }
+.menu-h li { float: left; font-size: 15px; border-left: 1px solid #fff; }
+
+.menu-h li:first-child { border:0;}
+.menu-h a { text-decoration: none; display: block; color: #fff; font-family: Gotham-Bold, Arial, sans-serif; padding: 6px 15px; }
+.menu-h a:hover,
+.menu-h a:active,
+.menu-h .active a { color: #c6061b; background: #fff; }
+.menu-h .active a { cursor: text; }
+
+#footer .menu-h { background: none; border: none; }
+#footer .menu-h li { font-size: 12px; border-left: 1px solid #252b2b; }
+
+#footer .menu-h a:hover,
+#footer .menu-h a:active,
+#footer .menu-h .active a { color: #ccc; background: #252B2B; }
+
+/* Vertical Menu
+------------------------------ */
+.menu-v { margin: 0 0 20px; }
+.menu-v a { padding: 0 0 5px 25px; background: url("https://ayler.com/i/arrows.png") no-repeat 5px 5px transparent; display:block; }
+.menu-v a:hover,
+.menu-v .active a { background-position: 5px -33px; color: #c6231b; }
+
+/* Styles for text
+------------------------------ */
+#head h2 { font: bold 35px/54px Gotham-Bold, Arial, sans-serif; color: #fff; padding: 10px 0 0; }
+#head .info { position: absolute; top: 25px; right: 20px; }
+#head address { margin-bottom: 10px; font-style: normal; }
+
+h1, h2, h3 { font: 22px Gotham-Bold, Arial, sans-serif; margin: 0 0 10px; }
+h1         { color: #d4b59a/*cfbea0*/; }
+h2, h3     { font-size: 14px; margin: 0 0 5px;}
+h3         { background: transparent url('https://ayler.com/i/arrow-hd.png') 0 6px no-repeat; color: #c6231b; padding-left: 8px; }
+h4         { font-size: 16px; color: #FFFFFF; }
+
+
+.col-narrow p, 
+.col-wide p { margin: 0 0 10px; line-height: 18px; }
+.rec-info   { display: block; margin: 0 0 10px; }
+.rec-info p { display: inline; }
+
+p.date      { margin: -25px 0 30px; float: right; font-style: italic; }
+
+#f-text  { color: #fff; float: right; font-size: 10px; margin: -25px 0 0; }
+.small   { font: 12px/15px Arial, Helvetica, sans-serif; }
+.h-line  { border-bottom: 1px solid #ccc; margin: 0 0 20px; padding: 0 0 15px; }
+#sbar .h-line   { margin: 0 0 15px; padding: 0 0 10px; }
+#sbar .h-line p { margin: 0 0 5px; }
+.klicktrack     { background: transparent url('https://ayler.com/i/klicktrack.gif') 0 2px no-repeat; padding-left: 20px; }
+.klicktrack a   { color: #c6231b; border-bottom: 1px dotted;}
+p.paypal { background: url("https://ayler.com/i/paypal-logo.gif") no-repeat scroll 175px top transparent; padding: 7px 0 5px; }
+.s-txt   { font-size: 10px; color: #4a4a4a; }
+ul.music { margin-top: 15px; }
+
+.b-track-list p { line-height: 22px; }
+.b-track-list a { overflow:hidden; height: 16px; padding-left:16px; background: #fff url('https://ayler.com/assets/templates/ar/i/audio.gif') no-repeat 0 1px;}
+.b-track-list a:hover, .b-track-list .played { background-position: 0 -19px; color: #c6231b; }
+.b-track-list .loading { background: #fff url('https://ayler.com/assets/templates/ar/i/ajax-loader.gif') no-repeat 0 0!important;}
+
+/* Catalog item
+------------------------------ */
+
+.b-cat-item,
+.b-cat-item-brief { float: left; width: 295px; overflow:hidden; margin: 0 10px 0 0; }
+.b-cat-item       { height: 135px; }
+.b-cat-item-brief { width: 140px; height: 180px; }
+.b-feat-item      { display:block; }
+.b-feat-item img  { padding: 0 15px 0 0; }
+.b-cat-img        { float: left; }
+.b-cat-txt,
+.col-wide .b-cat-txt p  { float: right; color: #0f090b; font-size: 12px; line-height: 15px; width: 180px; }
+.cat-item-number  { color: #C6231B; margin: 0 0 5px;}
+.cat-item-band    { font-weight:bold;}
+.cat-item-title   { font-weight: bold; }
+.cat-item-lineup  { }
+
+.b-feat-cont      { float: right; width: 365px; }
+/* Text align, float
+------------------------------ */
+
+.a-left { text-align: left; }
+.a-center { text-align: center; }
+.a-right { text-align: right; }
+
+.f-left { float: left; }
+.f-right { float: right; } 
+
+/*	Tables
+------------------------------ */
+
+table { border-collapse: collapse; width: 100%; }
+table th, table td { border: 1px solid #ccc; padding: 2px 3px; vertical-align: top; }
+table th { background: #f4f4f4; }
+table td {  }
+
+
+/* Images
+------------------------------ */
+
+#head img { margin-top: 5px; }
+.sbar img { border: 5px solid #F1EBEB; }
+.col-wide .cont-img { padding: 5px; border: 1px solid #B4B4B4; margin: 0; }
+
+.b-img img { padding:2px; border: 1px solid #ccccc9;}
+.content .hw-item img { padding: 0!important; border: 6px solid #002446!important; margin-top: .4em; }
+.content img.null-image { padding: 0!important; border: none!important; margin: 0!important; }
+img.f-left { margin-right: 1em; }
+img.f-right { margin-left: 1em; }
